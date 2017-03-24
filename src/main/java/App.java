@@ -12,8 +12,8 @@ public class App {
 
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("teams", Team.all());
       model.put("template", "templates/index.vtl");
+      model.put("teams", Team.all());
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
@@ -22,6 +22,14 @@ public class App {
       model.put("template", "templates/team-form.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
-    
+
+    post("/teams", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      String name = request.queryParams("name");
+      Team team = new Team(name);
+      model.put("teams", Team.all());
+      model.put("template", "templates/index.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
   }
 }

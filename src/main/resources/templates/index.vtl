@@ -3,7 +3,7 @@
 <h1>Startup Weekend Team Tracker</h1>
 <p>Welcome to the Team Tracker for the Startup Weekend!</p>
 
-#if ($teams)
+#if ($teams.size() > 0)
   <p>Team List:</p>
   <ul>
     #foreach ($team in $teams)
