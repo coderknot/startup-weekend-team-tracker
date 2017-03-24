@@ -40,4 +40,11 @@ public class MemberTest {
     Member testMember = new Member("Chris");
     assertEquals(1, testMember.getId());
   }
+
+  @Test
+  public void find_returnsMembersWithSameId_testMember2() {
+    Member testMember1 = new Member("Chris");
+    Member testMember2 = new Member("Jason");
+    assertEquals(testMember2, Member.find(testMember2.getId()));
+  }
 }
