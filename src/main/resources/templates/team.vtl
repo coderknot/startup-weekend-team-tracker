@@ -2,7 +2,7 @@
 <h1>$team.getName()</h1>
 
 #if ($team.getMembers().size() > 0)
-  <p>Member List:</p>
+  <p>Team Member List:</p>
   <ul>
   #foreach ($member in $team.getMembers())
     <li>$member.getName()</li>
@@ -12,5 +12,5 @@
   <p>$team.getName() has no team members, currently!</p>
 #end
 
-<a href="/teams/$team.getId()/members/new">Add New Member</a>
+<a href="/teams/$team.getId()/members/new">Add New Team Member</a>
 <!-- team.vtl -->
