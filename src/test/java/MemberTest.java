@@ -3,6 +3,11 @@ import static org.junit.Assert.*;
 
 public class MemberTest {
 
+  @Before
+  public void tearDown() {
+    Member.clear();
+  }
+  
   @Test
   public void Member_instantiatesCorrectly_true() {
     Member testMember = new Member("Chris");
