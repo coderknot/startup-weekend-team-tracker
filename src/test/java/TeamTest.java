@@ -8,4 +8,5 @@ public class TeamTest {
     Team testTeam = new Team("Team TOT");
     assertTrue(testTeam instanceof Team);
   }
+  
 }
