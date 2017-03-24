@@ -7,7 +7,7 @@ public class MemberTest {
   public void tearDown() {
     Member.clear();
   }
-  
+
   @Test
   public void Member_instantiatesCorrectly_true() {
     Member testMember = new Member("Chris");
@@ -33,5 +33,11 @@ public class MemberTest {
     Member testMember = new Member("Chris");
     Member.clear();
     assertEquals(0, Member.all().size());
+  }
+
+  @Test
+  public void getId_getsMemberId_1() {
+    Member testMember = new Member("Chris");
+    assertEquals(1, testMember.getId());
   }
 }
