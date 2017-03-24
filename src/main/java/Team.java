@@ -39,4 +39,8 @@ public class Team {
     return myMembers;
   }
 
+  public void addMember(Member member) {
+    myMembers.add(member);
+  }
+
 }
