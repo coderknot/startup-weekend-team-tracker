@@ -61,4 +61,5 @@ public class TeamTest {
     testTeam.addMember(testMember);
     assertTrue(testTeam.getMembers().contains(testMember));
   }
+  
 }
