@@ -41,4 +41,10 @@ public class TeamTest {
     assertEquals(1, testTeam.getId());
   }
 
+  @Test
+  public void find_returnsTeamsWithSameId_testTeam2() {
+    Team testTeam1 = new Team("Chris");
+    Team testTeam2 = new Team("Jason");
+    assertEquals(testTeam2, Team.find(testTeam2.getId()));
+  }
 }
