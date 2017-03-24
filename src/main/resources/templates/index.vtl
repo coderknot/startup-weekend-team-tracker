@@ -1,0 +1,18 @@
+<!-- index.vtl -->
+
+<h1>Startup Weekend Team Tracker</h1>
+<p>Welcome to the Team Tracker for the Startup Weekend!</p>
+
+#if ($teams)
+  <p>Team List:</p>
+  <ul>
+    #foreach ($team in $teams)
+      <li><a href="/teams/$team.getId()">$team.getName()</a></li>
+    #end
+  </ul>
+#else
+  <p>No teams, currently!</p>
+#end
+
+<a href="/teams/new">Add New Team</a>
+<!-- index.vtl -->
