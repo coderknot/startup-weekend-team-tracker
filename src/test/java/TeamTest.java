@@ -5,7 +5,7 @@ public class TeamTest {
 
   @Before
   public void tearDown() {
-    Member.clear();
+    Team.clear();
   }
 
   @Test
@@ -33,6 +33,12 @@ public class TeamTest {
     Team testTeam = new Team("Team TOT");
     Team.clear();
     assertEquals(0, Team.all().size());
+  }
+
+  @Test
+  public void getId_getsTeamId_1() {
+    Team testTeam = new Team("Team TOT");
+    assertEquals(1, testTeam.getId());
   }
 
 }

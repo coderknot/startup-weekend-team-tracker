@@ -5,14 +5,20 @@ public class Team {
 
   private String mName;
   private static List<Team> instances = new ArrayList<Team>();
+  private int mId;
 
   public Team(String name) {
     mName = name;
     instances.add(this);
+    mId = instances.size();
   }
 
   public String getName() {
     return mName;
+  }
+
+  public int getId() {
+    return mId;
   }
 
   public static List<Team> all() {
@@ -22,4 +28,5 @@ public class Team {
   public static void clear() {
     instances.clear();
   }
+
 }
