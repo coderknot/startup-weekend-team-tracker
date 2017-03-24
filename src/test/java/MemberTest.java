@@ -47,4 +47,5 @@ public class MemberTest {
     Member testMember2 = new Member("Jason");
     assertEquals(testMember2, Member.find(testMember2.getId()));
   }
+  
 }

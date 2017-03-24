@@ -18,4 +18,8 @@ public class Team {
   public static List<Team> all() {
     return instances;
   }
+
+  public static void clear() {
+    instances.clear();
+  }
 }
