@@ -8,4 +8,10 @@ public class MemberTest {
     Member testMember = new Member("Chris");
     assertTrue(testMember instanceof Member);
   }
+
+  @Test
+  public void getName_getsMemberName_Chris() {
+    Member testMember = new Member("Chris");
+    assertEquals("Chris", testMember.getName());
+  }
 }
