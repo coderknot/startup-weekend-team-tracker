@@ -3,6 +3,11 @@ import static org.junit.Assert.*;
 
 public class TeamTest {
 
+  @Before
+  public void tearDown() {
+    Member.clear();
+  }
+
   @Test
   public void Team_instantiatesCorrectly_true() {
     Team testTeam = new Team("Team TOT");
@@ -29,4 +34,5 @@ public class TeamTest {
     Team.clear();
     assertEquals(0, Team.all().size());
   }
+
 }
